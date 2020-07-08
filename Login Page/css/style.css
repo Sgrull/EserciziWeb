@@ -1,0 +1,20 @@
+body {
+  /*Medium acquamarine*/
+  background-color: #348781;
+  background-color: hsla(180, 80%, 30%, 0.4);
+  text-align: center;
+}
+
+legend {
+  /*text-align: left;*/
+}
+
+fieldset {
+  max-width: 300px;
+  margin-left: 41%; /*centrare il fieldset*/
+  border-radius: 1em;
+}
+
+label, input {
+  margin-top: 0.7em;
+}
