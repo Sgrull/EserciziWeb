@@ -2,6 +2,7 @@
 
   <head>
     <title>Lista Spesa</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
     <meta name="description" content="Shopping list for testing HTML\CSS\JS\JQuery">
     <meta name="keywords" content="test, shopping, login">
     <meta name="robots" content="noindex">
@@ -11,19 +12,21 @@
   </head>
 
   <body>
+  <div id="mainContent">
     <h1>Benvenuto</h1>
     <h2>Ecco la lista della spesa</h2>
 
-    <ul id="theList">
+    <ol id="theList">
 
-    </ul>
+    </ol>
 
-    <div id="newItemButton"><button href="#" id="showForm">Nuovo Elemento</button></div>
+    <div id="newItemButton"><button href="#" id="showForm"><img src="images/icons/plus.png"> Nuovo Elemento</button></div>
 
     <form id="newItemForm">
       <input type="text" id="itemDescription" maxlength="20" placeholder="Inserisci elemento..."/>
-      <input type="submit" id="addButton" value="Aggiungi"/>
+      <input type="image" class="addButton" name="submit" src="images/icons/plus.png">
     </form>
+  </div>
 
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/mod-elementi.js"></script>

@@ -1,0 +1,52 @@
+/*
+  #E6E2DD = marmo
+  #373A36 = petrolio
+  #D48166 = marancio
+
+  Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+*/
+
+body {
+  background-color: #E6E2DD;
+}
+
+#mainContent {
+  background-color: #373A36;
+  color: #E6E2DD;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 1em;
+  padding-bottom: 20px;
+  text-align: center;
+  max-width: 300px;
+  margin-left: 41%
+}
+
+ol {
+  border-style: solid;
+  border-radius: 1em;
+  border-width: medium;
+  margin-left: 20px;
+  max-width: 220px;
+  background-color: #D48166;
+  color: #373A36;
+  list-style-type: none;
+  text-align: left;
+}
+
+li {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+input.addButton {
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+
+#newItemButton img {
+  width: 20px;
+  height: 20px;
+  border: none;
+}

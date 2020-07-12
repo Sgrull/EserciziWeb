@@ -19,10 +19,10 @@ $(function() {
     var newText = $textInput.val();
     var button = $canButt;
     if ($theList.val() == false) {
-      $theList.prepend('<li>' + newText + ' ' + button + '</li>');
+      $theList.prepend('<li>' + newText + '</li>');
     }
     else {
-      $('li:last').after('<li>' + newText + ' ' + button + '</li>');
+      $('li:last').after('<li>' + newText + '</li>');
 
     }
     $newItemForm.hide();
