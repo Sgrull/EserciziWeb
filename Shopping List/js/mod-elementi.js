@@ -3,7 +3,6 @@ $(function() {
   var $newItemButton = $('#newItemButton');
   var $newItemForm = $('#newItemForm');
   var $textInput = $('input:text');
-  var $canButt = $('button');
   var $theList = $('#theList');
 
   $newItemButton.show();
@@ -17,14 +16,9 @@ $(function() {
   $newItemForm.on('submit', function(e){
     e.preventDefault();
     var newText = $textInput.val();
-    var button = $canButt;
-    if ($theList.val() == false) {
-      $theList.prepend('<li>' + newText + '</li>');
-    }
-    else {
-      $('li:last').after('<li>' + newText + '</li>');
-
-    }
+    var canc = $('<input type="image" class="cancButton" name="canc" src="images/icons/bin.png"/>');
+    var mod = $('<input type="image" class="modButton" name="mod" src="images/icons/wrench.png"/>');
+    $theList.append('<li>').append(newText).append(canc).append(mod).append('</li>');
     $newItemForm.hide();
     $newItemButton.show();
     $textInput.val('');

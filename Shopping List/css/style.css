@@ -50,3 +50,16 @@ input.addButton {
   height: 20px;
   border: none;
 }
+
+input.cancButton {
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin-left: 50%;
+}
+
+input.modButton {
+  width: 20px;
+  height: 20px;
+  border: none;
+}
