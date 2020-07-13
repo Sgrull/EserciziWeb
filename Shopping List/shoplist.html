@@ -17,7 +17,7 @@
     <h2>Ecco la lista della spesa</h2>
 
     <ol id="theList">
-
+<!--      <li><span>dende</span><input type="image" class="cancButton" name="canc" src="images/icons/bin.png"/></li>-->
     </ol>
 
     <div id="newItemButton"><button href="#" id="showForm"><img src="images/icons/plus.png"> Nuovo Elemento</button></div>
@@ -26,6 +26,12 @@
       <input type="text" id="itemDescription" maxlength="20" placeholder="Inserisci elemento..."/>
       <input type="image" class="addButton" name="submit" src="images/icons/plus.png">
     </form>
+
+    <form id="modItemForm">
+      <input type="text" id="modDescription" maxlength="20" placeholder="Modifica elemento..."/>
+      <input type="image" class="modButton" name="submit" src="images/icons/wrench.png">
+    </form>
+
   </div>
 
     <script src="js/jquery-3.4.1.js"></script>
