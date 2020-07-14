@@ -65,7 +65,6 @@ $(function() {
 
 //Evidenzia l'elemento da modificare, nasconde il form per aggiungere elementi else {
   //mostra quello per modificare il testo.
-}
   $($theList).on('click', 'input.modButton', function(e) {
       e.preventDefault();
       var high = $(this).parent(); //Salva in high il genitore di input = li
