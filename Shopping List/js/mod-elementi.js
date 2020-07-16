@@ -1,6 +1,8 @@
 $(function() {
 
   var $newItemButton = $('#newItemButton');
+  var $closeListButton = $('#closeListButton');
+  var $modListButton = $('#modListButton');
   var $newItemForm = $('#newItemForm');
   var $modItemForm = $('#modItemForm');
   var $textInput = $('input:text');
@@ -12,6 +14,9 @@ $(function() {
   $newItemButton.show();
   $newItemForm.hide();
   $modItemForm.hide();
+  $closeListButton.hide();
+  $modListButton.hide();
+
 
 //Cliccando su Nuovo Elemento nasconde il pulsante e mostra il form
   $('#showForm').on('click', function(){

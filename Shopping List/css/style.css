@@ -1,7 +1,7 @@
 /*
-  #E6E2DD = marmo
-  #373A36 = petrolio
-  #D48166 = marancio
+  #F7F4E9 = marmo
+  #3CBCC3 = celestino
+  #EBA63F = giallino
 
   Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 */
@@ -11,8 +11,7 @@ body {
 }
 
 #mainContent {
-  background-color: #373A36;
-  color: #E6E2DD;
+  background-color: #3CBCC3;
   border-style: solid;
   border-width: thin;
   border-radius: 1em;
@@ -29,8 +28,7 @@ ol {
   margin-left: 20px;
   padding-left: 5%;
   max-width: 220px;
-  background-color: #D48166;
-  color: #373A36;
+  background-color: #EBA63F;
   list-style-type: none;
   text-align: left;
 }
@@ -41,14 +39,14 @@ li {
 }
 
 span {
-  margin-right: 50%;
+
 }
 
 .mod {
   border-style: solid;
   border-width: 4px;
-  border-color: #373A36;
-  background-color: #E6E2DD;
+  border-color: #F7F4E9;
+  background-color: #3CBCC3;
 }
 
 input.addButton {
@@ -63,16 +61,31 @@ input.addButton {
   border: none;
 }
 
+#closeListButton img {
+  width: 18px;
+  height: 18px;
+  border: none;
+}
+
+#modListButton img {
+  width: 18px;
+  height: 18px;
+  border: none;
+}
+
 input.cancButton {
   width: 18px;
   height: 18px;
   border: none;
+  float: right;
+  margin-right: 5px;
 }
 
 input.modButton {
   width: 18px;
   height: 18px;
   border: none;
+  float: right;
 }
 
 span.through {
