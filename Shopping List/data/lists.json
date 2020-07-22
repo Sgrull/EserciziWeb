@@ -1,0 +1,32 @@
+{
+  "lists" : [
+    {
+      "title": "Lista Panini",
+      "elements": [
+        {
+          "element": "Doppio Hamburger"
+        }
+        {
+          "element": "Triplo Hamburger"
+        }
+        {
+          "element": "Hamburger Vegano"
+        }
+      ]
+    },
+    {
+      "title": "Lista Pizze",
+      "elements": [
+        {
+          "element": "Margarita"
+        }
+        {
+          "element": "Diavolo"
+        }
+        {
+          "element": "Capricciusa"
+        }
+      ]
+    }
+  ]
+}
