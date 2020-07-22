@@ -29,7 +29,9 @@ $(function() {
   $newItemForm.on('submit', function(e){
     e.preventDefault();
     var newText = $textInput.val();
-    $($theList).append('<li><span>' + newText +'</span>' + cancBut + modBut + '</li>');
+    if (newText != '') {
+          $($theList).append('<li><span>' + newText +'</span>' + cancBut + modBut + '</li>');
+    }
     $newItemForm.hide();
     $newItemButton.show();
     $textInput.val('');

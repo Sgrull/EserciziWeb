@@ -17,17 +17,32 @@ body {
   border-radius: 1em;
   padding-bottom: 20px;
   text-align: center;
-  max-width: 300px;
-  margin-left: 41%
+  position: fixed;
+  min-width: 450px;
+  left: 25%;
+  right: 25%
 }
 
-ol {
+#listOfLists {
+  list-style-type: none;
+  text-align: center;
+}
+
+#listOfLists li {
+  background-color: #EBA63F;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #F7F4E9;
+
+}
+
+#theList {
   border-style: solid;
   border-radius: 1em;
   border-width: medium;
   margin-left: 20px;
   padding-left: 5%;
-  max-width: 220px;
+  min-width: 200px;
   background-color: #EBA63F;
   list-style-type: none;
   text-align: left;
@@ -36,10 +51,6 @@ ol {
 li {
   padding-bottom: 5px;
   padding-top: 5px;
-}
-
-span {
-
 }
 
 .mod {
@@ -53,6 +64,16 @@ input.addButton {
   width: 18px;
   height: 18px;
   border: none;
+}
+
+#left {
+  width: 47%;
+  float: left;
+}
+
+#right {
+  width: 47%;
+  float: left;
 }
 
 #newItemButton img {
