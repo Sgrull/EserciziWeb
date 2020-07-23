@@ -12,21 +12,22 @@ $(function() {
   var $listOfLists = $('#listOfLists');
   var $right = $('#right');
 
+//Innvia richiesta HTTP
   var xhr = new XMLHttpRequest();
 
-  xhr.onload = function() {
-    responseObject = JSON.parse(xhr.responseText);
-
-    var newContent= '';
-    for (var i=0; i < responseObject.lists.length; i++) {
-      newContent += '<li><button> responseObject.lists[i].title </button></li>'
-    }
-
-    document.getElementById('listOfLists').innerHTML = newContent;
-  };
-
+// Carica file JSON
   xhr.open('GET', 'data/lists.json', true);
   xhr.send(null);
+
+// Carica nomi liste a sinistra da data.JSON
+  xhr.onload = function() {
+    responseObject = JSON.parse(xhr.responseText);
+    var newContent= '';
+    for (var i=0; i < responseObject.lists.length; i++) {
+      newContent += '<li><button>' +  responseObject.lists[i].title + '</button></li>';
+    }
+    $($listOfLists).append(newContent);
+  };
 
 // mostra il pulsante per aggiungere elementi alla lista e nasconde i form per inserirli o modificarli
   $right.hide();
@@ -39,9 +40,29 @@ $(function() {
 //Cliccando sulla Lista viene selezionata e appare il contenuto
   $listOfLists.on('click', 'button', function(e){
     e.preventDefault();
-    var selectedButt = $(this);
-    selectedButt.addClass('selected');
-    $right.show();
+    var selectedButt = $(this); //lista selezionata
+    $theList.html(''); //rimove contenuto della lista di elementi se c'è
+    $('#listTitle').remove(); //rimuove il titolo della lista se c'è
+
+    //TODO rimuovere questo controllo e mettere tasto salvataggio
+    if (selectedButt.hasClass('selected')) {
+      selectedButt.removeClass('selected');
+      $right.hide();
+    }
+    else {
+      $listOfLists.children().children().removeClass('selected'); //scegliendo una lista deseleziona le altre
+      selectedButt.addClass('selected'); //seleziona la lista corrente
+      $right.show(); //mostra la parete destra
+      responseObject = JSON.parse(xhr.responseText); //Parse file json
+      for (var i=0; i < responseObject.lists.length; i++) { // cerca nel json la lista con il nome selezionato
+        if (responseObject.lists[i].title == selectedButt.text()) {
+          $($right).prepend('<h2 id="listTitle">' + responseObject.lists[i].title + '</h2>') //aggiunge il titolo della lista
+          for (var j=0; j < responseObject.lists[i].elements[j].length; j++) { //aggiunge gli elementi della lista con i pulsanti
+            $($theList).append('<li><span>' + responseObject.lists[i].elements[j] +'</span>' + cancBut + modBut + '</li>');
+          }
+        }
+      }
+    }
     //TODO caricare lista
   });
 
