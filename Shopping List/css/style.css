@@ -2,6 +2,7 @@
   #F7F4E9 = marmo
   #3CBCC3 = celestino
   #EBA63F = giallino
+  #C70039 = rossiccio
 
   Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 */
@@ -28,12 +29,20 @@ body {
   text-align: center;
 }
 
-#listOfLists li {
+#listOfLists button {
   background-color: #EBA63F;
+  min-width: 90%;
   margin-top: 5px;
   margin-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: #F7F4E9;
+  letter-spacing: 3px;
+  float: left;
+}
 
+#listOfLists button.selected {
+  background-color: #C70039;
 }
 
 #theList {

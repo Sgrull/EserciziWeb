@@ -9,6 +9,7 @@ $(function() {
   var cancBut = ('<input type="image" class="cancButton" name="canc" src="images/icons/bin.png"/>');
   var modBut = ('<input type="image" class="modButton" name="mod" src="images/icons/wrench.png"/>');
   var $theList = $('#theList');
+  var $listOfLists = $('#listOfLists');
 
 // mostra il pulsante per aggiungere elementi alla lista e nasconde i form per inserirli o modificarli
   $newItemButton.show();
@@ -17,6 +18,12 @@ $(function() {
   $closeListButton.hide();
   $modListButton.hide();
 
+  $listOfLists.on('click', 'button', function(e){
+    e.preventDefault();
+    var selectedButt = $(this);
+    selectedButt.addClass('selected');
+    //TODO caricare lista
+  });
 
 //Cliccando su Nuovo Elemento nasconde il pulsante e mostra il form
   $('#showForm').on('click', function(){
