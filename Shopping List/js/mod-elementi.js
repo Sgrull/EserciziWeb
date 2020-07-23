@@ -10,18 +10,38 @@ $(function() {
   var modBut = ('<input type="image" class="modButton" name="mod" src="images/icons/wrench.png"/>');
   var $theList = $('#theList');
   var $listOfLists = $('#listOfLists');
+  var $right = $('#right');
+
+  var xhr = new XMLHttpRequest();
+
+  xhr.onload = function() {
+    responseObject = JSON.parse(xhr.responseText);
+
+    var newContent= '';
+    for (var i=0; i < responseObject.lists.length; i++) {
+      newContent += '<li><button> responseObject.lists[i].title </button></li>'
+    }
+
+    document.getElementById('listOfLists').innerHTML = newContent;
+  };
+
+  xhr.open('GET', 'data/lists.json', true);
+  xhr.send(null);
 
 // mostra il pulsante per aggiungere elementi alla lista e nasconde i form per inserirli o modificarli
+  $right.hide();
   $newItemButton.show();
   $newItemForm.hide();
   $modItemForm.hide();
   $closeListButton.hide();
   $modListButton.hide();
 
+//Cliccando sulla Lista viene selezionata e appare il contenuto
   $listOfLists.on('click', 'button', function(e){
     e.preventDefault();
     var selectedButt = $(this);
     selectedButt.addClass('selected');
+    $right.show();
     //TODO caricare lista
   });
 

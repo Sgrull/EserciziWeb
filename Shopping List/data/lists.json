@@ -2,31 +2,15 @@
   "lists" : [
     {
       "title": "Lista Panini",
-      "elements": [
-        {
-          "element": "Doppio Hamburger"
-        }
-        {
-          "element": "Triplo Hamburger"
-        }
-        {
-          "element": "Hamburger Vegano"
-        }
-      ]
+      "elements": ["Doppio Hamburger",
+                    "Triplo Hamburger",
+                    "Hamburger Vegano"]
     },
     {
       "title": "Lista Pizze",
-      "elements": [
-        {
-          "element": "Margarita"
-        }
-        {
-          "element": "Diavolo"
-        }
-        {
-          "element": "Capricciusa"
-        }
-      ]
+      "elements": ["Margarita",
+                  "Diavolo",
+                  "Capricciusa"]
     }
   ]
 }
